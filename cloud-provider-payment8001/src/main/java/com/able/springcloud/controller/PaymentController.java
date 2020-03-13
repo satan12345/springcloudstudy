@@ -25,7 +25,7 @@ public class PaymentController {
     @PostMapping(value = "create")
     public String create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
-        log.info("*****插入结果影响的条数222：{}", result);
+        log.info("*****插入结果影响的条数：{}", result);
 
         return "数据插入成功";
     }
@@ -33,7 +33,7 @@ public class PaymentController {
     @GetMapping(value = "get/{id}")
     public Payment getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
-        log.info("getPaymentById 根据id={} 查询到的数据为:{}",id,payment);
+        log.info("getPaymentById 哈哈还 根据id={} 查询到的数据为:{}",id,payment);
         return payment;
     }
 

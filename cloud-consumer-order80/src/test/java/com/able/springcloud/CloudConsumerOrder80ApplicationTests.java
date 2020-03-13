@@ -1,4 +1,4 @@
-package com.able.springcloud.cloudconsumerorder80;
+package com.able.springcloud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

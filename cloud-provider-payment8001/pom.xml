@@ -84,6 +84,10 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.able.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

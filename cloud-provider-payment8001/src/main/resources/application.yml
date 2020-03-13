@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.223:3306/db2019?characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: ablejava
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.able.springcloud.entities    # 所有Entity别名类所在包

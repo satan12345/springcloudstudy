@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.io.Serializable;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -28,6 +29,8 @@ public class Payment implements Serializable {
     private Long id;
     @Column(name = "serial")
     private String serial;
+    @Transient
+    private int port;
 
 }
 

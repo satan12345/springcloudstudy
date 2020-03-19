@@ -6,14 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@RibbonClients(
-//        {@RibbonClient(name = "CLOUD-PAYMENT-SERVICE", configuration = MySelfRule.class)}
-//
-//)
-public class CloudConsumerOrder80Application {
+public class CloudConsumerconsulOrder80Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudConsumerOrder80Application.class, args);
+        SpringApplication.run(CloudConsumerconsulOrder80Application.class, args);
     }
 
 }

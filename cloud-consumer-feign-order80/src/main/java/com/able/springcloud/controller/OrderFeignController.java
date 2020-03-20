@@ -30,6 +30,10 @@ public class OrderFeignController {
         log.info("查询到的结果为:{}",result);
         return result;
     }
+    @GetMapping(value = "/feign/consumer/payment/timeout")
+    public CommonResponse<String> timeout(){
+        return paymentFeignService.timeout();
+    }
 
 }
 

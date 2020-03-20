@@ -23,3 +23,8 @@ eureka:
     #lease-renewal-interval-in-seconds: 1
     #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
     #lease-expiration-duration-in-seconds: 2
+
+#openFeign控制超时
+ribbon:
+  ReadTimeout:  5000
+  ConnectTimeout: 5000

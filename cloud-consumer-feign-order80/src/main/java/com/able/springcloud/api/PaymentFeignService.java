@@ -1,5 +1,6 @@
 package com.able.springcloud.api;
 
+import com.able.springcloud.config.FeignConfig;
 import com.able.springcloud.dto.CommonResponse;
 import com.able.springcloud.entities.Payment;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -13,8 +14,11 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @description
  */
 @Component
-@FeignClient("CLOUD-PAYMENT-SERVICE")
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 public interface PaymentFeignService {
     @GetMapping("payment/get/{id}")
     CommonResponse<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    @GetMapping("payment/timeout")
+    CommonResponse<String>  timeout();
 }

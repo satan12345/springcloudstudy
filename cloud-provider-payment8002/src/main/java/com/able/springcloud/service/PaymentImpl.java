@@ -1,4 +1,4 @@
-package com.able.springcloud.service.impl;
+package com.able.springcloud.service;
 
 import com.able.springcloud.entities.Payment;
 import com.able.springcloud.mapper.PaymentMapper;

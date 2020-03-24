@@ -4,6 +4,7 @@ import com.able.springcloud.annotation.UseResponseAdvice;
 import com.able.springcloud.entities.Payment;
 import com.able.springcloud.service.PaymentService;
 import com.google.common.collect.Lists;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -37,6 +38,7 @@ public class PaymentController {
         return result;
     }
 
+
     @GetMapping("/hystrix/timeout/{id}")
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id)
     {
@@ -44,6 +46,8 @@ public class PaymentController {
         log.info("*****result: "+result);
         return result;
     }
+
+
 
 }
 

@@ -1,0 +1,26 @@
+server:
+  port: 3344
+eureka:
+  client:
+    register-with-eureka: true    #表识不向注册中心注册自己
+    fetch-registry: true   #表示自己就是注册中心，职责是维护服务实例，并不需要去检索服务
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: cloud-config-cneter
+    #    #访问路径可以显示IP地址
+    prefer-ip-address: true
+spring:
+  application:
+    name: cloud-config-cneter
+  cloud:
+    config:
+      server:
+        git:
+          #github上的git仓库名称
+          uri:  git@github.com:satan12345/config-repo.git
+          ###搜索目录
+          search-paths:
+            - config-repo
+      ##读取分支
+      label: master

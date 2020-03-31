@@ -7,10 +7,10 @@
         <artifactId>cloudstudy</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <!--<groupId>com.able.springcloud</groupId>-->
-    <artifactId>config-client-3355</artifactId>
-    <!--<version>0.0.1-SNAPSHOT</version>-->
-    <name>config-client-3355</name>
+    <groupId>com.able.springcloud</groupId>
+    <artifactId>cloud-config-client-3366</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>cloud-config-client-3366</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -23,7 +23,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
@@ -76,7 +75,6 @@
                     <groupId>com.github.pagehelper</groupId>
                     <artifactId>pagehelper-spring-boot-starter</artifactId>
                 </exclusion>
-
             </exclusions>
         </dependency>
     </dependencies>

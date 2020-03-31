@@ -24,3 +24,17 @@ spring:
             - config-repo
       ##读取分支
       label: master
+  rabbitmq:
+    virtual-host: /
+    host: 192.168.9.252
+    username: admin
+    password: admin
+
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+

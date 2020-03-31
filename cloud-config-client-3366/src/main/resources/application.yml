@@ -1,8 +1,8 @@
 server:
-  port: 3355
+  port: 3366
 spring:
   application:
-    name: cloud-config-client-3355
+    name: cloud-config-client-3366
   rabbitmq:
     virtual-host: /
     host: 192.168.9.252
@@ -17,13 +17,8 @@ eureka:
     service-url:
       defaultZone: ${config.eurekapath}
   instance:
-    instance-id: cloud-config-client-3355
+    instance-id: cloud-config-client-3366
     #    #访问路径可以显示IP地址
     prefer-ip-address: true
 
 #暴露监控端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

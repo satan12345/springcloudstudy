@@ -65,6 +65,13 @@ public class OrderController {
         ServiceInstance instances = loadBalancer.instances(serviceInstanceList);
         return instances.getPort();
     }
+    // ====================> zipkin+sleuth
+    @GetMapping("/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject(PAYMENT_URL+"/payment/zipkin/", String.class);
+        return result;
+    }
 
 
 }

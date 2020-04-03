@@ -65,6 +65,12 @@ public class PaymentController {
         return "超时测试"+port;
     }
 
+    @GetMapping("/zipkin")
+    public String paymentZipkin()
+    {
+        return "hi ,i'am paymentzipkin server fall back，welcome to atguigu，O(∩_∩)O哈哈~";
+    }
+
 
 }
 

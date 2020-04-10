@@ -1,5 +1,7 @@
 package com.able.springcloud.controller;
 
+import cn.hutool.Hutool;
+import cn.hutool.core.util.RandomUtil;
 import com.able.springcloud.annotation.UseResponseAdvice;
 import com.able.springcloud.dto.CommonResponse;
 import com.able.springcloud.entities.Payment;
@@ -14,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @param
@@ -56,6 +59,7 @@ public class OrderController {
     }
     @GetMapping("testEntitry")
     public ResponseEntity<String> testEntitry(){
+
         ResponseEntity<String> forEntity =new ResponseEntity<>("测试一下",HttpStatus.OK);
         return forEntity;
     }

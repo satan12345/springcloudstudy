@@ -4,8 +4,6 @@ import com.able.springcloud.annotation.UseResponseAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * @param
  * @author jipeng
@@ -16,8 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class FlowLimitController {
 
     @GetMapping("/testA")
-    public String testA() throws InterruptedException {
-
+    public String testA(){
         return "test-AA";
     }
 
@@ -25,6 +22,5 @@ public class FlowLimitController {
     public String testB(){
         return "test-BB";
     }
-
 }
 
